@@ -1,13 +1,11 @@
-import { useState } from 'react'
 import './App.css'
+import LayOut from './Layout/LayOut'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-     
-      
+     <LayOut />
     </>
   )
 }
