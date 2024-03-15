@@ -5,16 +5,27 @@
   text-align: none;
   list-style: none;
   font-family: 'segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 :root{
-  --color_primary: #6c63ff;
+  --color-primary: #6c63ff;
   --text-color: black;
   --color-bg: rgb(236, 236, 236);
   --color-card: white;
   --color-soft: #aaaaaa;
-  --color-border: lightgray;
+  --color-border: rgb(98, 96, 96);
   --color-red: red;
+}
+.darkmode{
+  --text-color: white;
+  --color-bg: black;
+  --color-card: #111111;
+}
+body{
+  overflow-x: hidden;
 }
 .container{
   min-width: 991px;
