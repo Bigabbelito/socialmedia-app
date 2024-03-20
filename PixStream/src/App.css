@@ -16,7 +16,7 @@
   --color-bg: rgb(236, 236, 236);
   --color-card: white;
   --color-soft: #aaaaaa;
-  --color-border: rgb(98, 96, 96);
+  --color-border: #adadad;
   --color-red: red;
 }
 .darkmode{
@@ -99,4 +99,19 @@ main{
   grid-template-columns: 20% 54% 23%;
   gap: 3%;
   width: 100%;
+}
+
+@media (max-width:1024px){
+  main{
+    grid-template-columns: 8% 50% 32%;
+  }
+}
+
+@media (max-width:768px){
+  main{
+    grid-template-columns: 100%;
+  }
+  .container{
+    width: 94%;
+  }
 }
