@@ -76,6 +76,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
     .story .user{
         display: none;
@@ -88,6 +89,7 @@
         font-size: 1rem;
     }
     .stories{
-    width: 410px;
+    width: 55%;
+    
     }
 }

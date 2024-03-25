@@ -14,7 +14,7 @@ export default function AddPost() {
         </div> 
         <div className='post-categories'>
             <label htmlFor='file'>
-               <input type='file' />
+               <input type='file' id='file'/>
                <span><FontAwesomeIcon icon={faImage} /> Photos </span>
             </label>
             <label htmlFor='file'>

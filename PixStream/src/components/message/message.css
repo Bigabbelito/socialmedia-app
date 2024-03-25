@@ -1,55 +1,100 @@
-.Meessage{
-    background: var(--color-card);
-    margin: 20px auto;
-    border-radius: 2rem;
-    padding: 14px;
-}
-.message-top{
+/* Base styles for the Message component */
+.Message {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    max-width: 300px; /* Adjust based on your layout */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.message-top {
+    display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
-}
-.message-search{
-    background-color: var(--color-bg);
-    display: flex;
-    gap: 5px;
     align-items: center;
-    border-radius: 1rem;
-    padding: 0.7rem;
-    margin-bottom: 1rem;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
 }
-.message-search input{
-    background: var(--color-text);
-}
-.border-div{
-    width: 100%;
-    height: .1rem;
-    background: var(--color-bg);
-    margin-bottom: 20px;
-}
-.message{
+
+.message-search {
     display: flex;
-    gap: 5px;
-    margin-bottom: 1rem;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
 }
-.message .user{
+
+.message-search input {
+    width: 100%;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.2s;
+}
+
+.message:hover {
+    background-color: #f9f9f9;
+}
+
+.user {
     position: relative;
-    height: fit-content;
-    width: fit-content;
 }
-.green-active{
-    height: 12px;
-    width: 11px;
-    background-color: var(--color-primary);
+
+.green-active {
     position: absolute;
+    right: -2px;
     bottom: 0;
-    right: 0;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
+    background-color: #4CAF50;
+    border: 2px solid white;
 }
-.message p{
-    font-size: .9rem;
+
+.message-body {
+    margin-left: 10px;
 }
-.rightbar-container{
-    width: 80%;
+
+.message-body h5 {
+    margin: 0;
+    color: #333;
+}
+
+.message-body p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Message {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .message-top, .message-search, .message {
+        padding: 5px;
+    }
+
+    .message-body h5, .message-body p {
+        font-size: smaller;
+    }
+
+    .user img {
+        width: 30px; /* Smaller profile images on very small screens */
+    }
+
+    .green-active {
+        width: 8px;
+        height: 8px;
+    }
 }

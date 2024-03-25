@@ -1,25 +1,23 @@
 import  './feeds.css'
-import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faListDots } from '@fortawesome/free-solid-svg-icons'
 
-export default function Feeds({fed}) {
+
+import Feed from './Feed'
+
+import HomeFeedData from '../../FackApis/HomeFeedData'
+//console.log(HomeFeedData[0]);
+
+export default function Feeds() {
+  console.log('hello world')
+  HomeFeedData.forEach((x, index) => console.log('Feed: ', index, x));
+
   return (
-    <div className='feed'>
-        <div className='top-content'>
-        <Link to='/profile/id'>
-            <div className='user'>
-               <img src={fed.feedPofile} alt='' />
-               <div>
-               <h5>{fed.name}</h5>
-               <small>1 Minutes Ago</small>
-               </div>
-            </div>
-        </Link>
-        <span><FontAwesomeIcon icon={faListDots} /></span>
-        </div>
-        <p>{fed.desc}</p>
-        <img src={fed.feedImage} alt='' />
+    <div className='feeds'>
+    {
+      HomeFeedData.map(fed=>(
+        <Feed fed={fed} key={fed.key} />
+      ))
+    }
+      
     </div>
   )
 }
